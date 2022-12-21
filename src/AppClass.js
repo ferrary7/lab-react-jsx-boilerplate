@@ -26,5 +26,16 @@ export default class AppClass extends Component{
     return data;
   }
 
-  // code here
+  render(){
+    return(
+      <div className='App'>
+        <h1>Kalvium Gallery</h1>
+        <div className='Gallery'>
+          {this.imageData().map((e) => {
+           return (<img src={e.img} alt='img(i)' key={e.id} />)
+        })}
+        </div>
+      </div>
+    );
+  }
 }
